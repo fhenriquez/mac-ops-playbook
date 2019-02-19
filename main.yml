@@ -12,11 +12,55 @@
       tags: ['always']
 
   roles:
+    - role: ansible-bash_it
+      user: fhenriquez
+      aliases:
+        - curl 
+        - custom
+        - general
+        - git
+        - homebrew-cask
+        - homebrew
+        - openstack
+        - osx
+        - reference
+        - regex
+        - ssh_host
+        - validate
+      plugins:
+        - base
+        - explain
+        - extract
+        - git
+        - history
+        - osx
+        - ssh
+        - virtualenv 
+      completions:
+        - bash-it
+        - brew
+        - defaults
+        - dirs
+        - git
+        - ssh
+        - system
+      theme:
+        - sysadmin_binaryanomaly
+        #- binaryanomaly
+      tags: ['bashit']
+      when: configure_bashit
+
+#    - role: ansible-firefox-addon
+#      tags: ['ffaddons']
+#      when: configure_ffaddon
+
     - role: geerlingguy.homebrew
       tags: ['homebrew']
+
     - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
+
     - role: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']

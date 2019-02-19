@@ -1,14 +1,16 @@
 ---
 downloads: ~/.ansible-downloads/
 
+configure_bashit: yes
 configure_dotfiles: yes
-configure_sudoers: yes
-configure_terminal: yes
-configure_osx: yes
+configure_ffaddon: no
+configure_sudoers: no
+configure_terminal: no 
+configure_osx: no 
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
-dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
+#dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+#dotfiles_repo_accept_hostkey: yes
+#dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
 dotfiles_files:
   - .bash_profile
   - .gitignore
@@ -20,17 +22,19 @@ homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
   - bash-completion
-  - doxygen
-  - gettext
+  #- doxygen
+  #- gettext
   - gifsicle
   - git
   - go
   - gpg
-  - hub
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
+  #- hub
+  #- httpie
+  #- iperf
+  - jq
+  #- libevent
+  #- sqlite
+  - mopidy
   - mcrypt
   - nmap
   - node
@@ -42,7 +46,7 @@ homebrew_installed_packages:
   - openssl
   - pv
   - wget
-  - wrk
+  #- wrk
 
 homebrew_taps:
   - homebrew/core
@@ -50,18 +54,27 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  - alfred
+  - caffeine
+  #- chromedriver
+  - day-o
   - docker
   - dropbox
+  - evernote
+  - flowdock
   - firefox
   - google-chrome
   - handbrake
   - licecap
   - limechat
-  - macvim
-  - sequel-pro
+  - iterm2
+  #- macvim
+  - mopidy
+  #- nvALT
+  #- sequel-pro
   - skitch
   - slack
+  - spotify
   - sublime-text
   - transmit
   - vagrant
