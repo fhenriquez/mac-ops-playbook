@@ -17,6 +17,7 @@ dotfiles_files:
   - .bash_functions
   - .bash_profile
   - .bashrc
+  - .gitconfig
 #  - .gitignore
 #  - .inputrc
 #  - .osx
@@ -74,7 +75,12 @@ homebrew_installed_packages:
   - jq
   #- libevent
   #- sqlite
+  - mps-youtube
+  - mpv
+  - mopidy
+  - mopidy-spotify
   - mcrypt
+  - ncmpcpp
   - nmap
   - node
   - nvm
@@ -109,7 +115,6 @@ homebrew_cask_apps:
   - limechat
   - iterm2
   #- macvim
-  - mopidy
   #- nvALT
   - pycharm-ce
   #- sequel-pro
