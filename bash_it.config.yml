@@ -1,0 +1,151 @@
+---
+downloads: ~/.ansible-downloads/
+
+user: "{{ ansible_user_id }}"
+
+configure_bashit: yes
+configure_dotfiles: yes
+configure_qutebrowser: yes
+configure_ffaddon: no
+configure_sudoers: no
+configure_terminal: no 
+configure_osx: no 
+
+dotfiles_repo: "https://github.com/fhenriquez/dotfiles.git"
+#dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: "~/personalgit/dotfiles" 
+dotfiles_files:
+  - .bash_color_codes
+  - .bash_functions
+  - .bash_profile
+  - .bashrc
+  - .vimrc
+
+bashit_aliases:
+  - curl
+  - custom
+  - general
+  - git
+  - homebrew-cask
+  - homebrew
+  - openstack
+  - osx
+  - reference
+  - regex
+  - ssh_host
+  - validate
+bashit_plugins:
+  - base
+  - extract
+  - git
+  - history
+  - osx
+  - ssh
+  - virtualenv
+bashit_completions:
+  - bash-it
+  - brew
+  - defaults
+  - dirs
+  - git
+  - ssh
+  - system
+bashit_theme:
+  - sysadmin_binaryanomaly
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - autoconf
+  - bash-completion
+  #- doxygen
+  #- gettext
+  - gifsicle
+  - git
+  - go
+  - gpg
+  #- hub
+  #- httpie
+  #- iperf
+  - jq
+  #- libevent
+  #- sqlite
+  - mopidy
+  - mopidy-spotify
+  - mcrypt
+  - mps-youtube
+  - nmap
+  - ncmpcpp
+  - node
+  - nvm
+  - php
+  - ssh-copy-id
+  - cowsay
+  - readline
+  - openssl
+  - pv
+  - wget
+  #- wrk
+  - xmlstarlet
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - mopidy/mopidy
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - alfred
+  - caffeine
+  #- chromedriver
+  - day-o
+  - docker
+  - dropbox
+  - evernote
+  - flowdock
+  #- firefox
+  #- google-chrome
+  - handbrake
+  - licecap
+  - limechat
+  - iterm2
+  #- macvim
+  #- nvALT
+  - pycharm-ce
+  #- sequel-pro
+  - qutebrowser
+  - skitch
+  - slack
+  - spotify
+  - sublime-text
+  - transmit
+  - vagrant
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+  # - name: drush
+  #   state: present # present/absent, default: present
+  #   version: "^8.1" # default: N/A
+gem_packages: []
+  # - name: bundler
+  #   state: present # present/absent/latest, default: present
+  #   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+  # - name: webpack
+  #   state: present # present/absent/latest, default: present
+  #   version: "^2.6" # default: N/A
+pip_packages: []
+  # - name: mkdocs
+  #   state: present # present/absent/latest, default: present
+  #   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
